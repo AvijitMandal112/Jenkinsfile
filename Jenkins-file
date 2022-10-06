@@ -1,0 +1,27 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Pull') {
+            steps {
+                echo 'pull'
+                git branch: 'main', url: 'https://github.com/AvijitMandal112/dreamhouse-lwc.git'
+            }
+        }
+        stage('build') {
+            steps {
+                echo 'build'
+            }
+        }
+        stage('test') {
+            steps {
+                echo 'test'
+            }
+        }
+        stage('deployed') {
+            steps {
+                echo 'deployed'
+            }
+        }
+    }
+}
